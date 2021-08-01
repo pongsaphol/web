@@ -94,19 +94,19 @@ const Index = () => {
 
   return (
     <div>
-      <div className="flex bg-gradient-to-b from-blue-600 to-gray-200 w-screen h-screen justify-center items-center">
-        <div className="flex flex-col justify-around bg-white/50 backdrop-blur-2xl rounded-3xl shadow-xl items-center h-2/3 md:h-3/4 w-11/12 md:w-3/4 py-24">
+      <div className="flex bg-gradient-to-b from-blue-600 to-gray-200 dark:from-blue-700 dark:to-gray-900 w-screen h-screen justify-center items-center">
+        <div className="flex flex-col justify-around bg-white/50 dark:bg-black/50 backdrop-blur-2xl rounded-3xl shadow-xl items-center h-2/3 md:h-3/4 w-11/12 md:w-3/4 py-24">
           {/* <p className="text-6xl text-gray-700">1</p> */}
           <img
             className="inline-block h-48 w-48 md:h-72 md:w-72 rounded-full shadow-xl"
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
             alt=""
           />
-          <div className="flex flex-col md:flex-row h-24 justify-center items-center">
-            <span className="h-12 md:h-20 text-4xl md:text-5xl lg:text-6xl text-center font-bold decoration-clone bg-blue-800 text-gray-600 text-opacity-50 bg-clip-text pb-1 md:pb-2 md:mr-6">
+          <div className="flex flex-col md:flex-row h-24 justify-center items-center my-4">
+            <span className="h-12 md:h-20 text-4xl md:text-5xl lg:text-6xl text-center font-bold decoration-clone bg-blue-800 text-gray-600 text-opacity-50 dark:bg-blue-500 dark:text-opacity-70 dark:text-gray-300 bg-clip-text pb-1 md:pb-2 md:mr-6">
               {innerName}
             </span>
-            <span className="h-12 md:h-20 text-4xl md:text-5xl lg:text-6xl text-center font-bold decoration-clone bg-blue-800 text-gray-600 text-opacity-50 bg-clip-text pb-1 md:pb-2">
+            <span className="h-12 md:h-20 text-4xl md:text-5xl lg:text-6xl text-center font-bold decoration-clone bg-blue-800 text-gray-600 text-opacity-50 dark:bg-blue-500 dark:text-opacity-70 dark:text-gray-300 bg-clip-text pb-1 md:pb-2">
               {innerSurname}
             </span>
           </div>
@@ -115,7 +115,7 @@ const Index = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-blue-500 hover:text-blue-800"
+                className="text-blue-500 dark:text-blue-700 hover:text-blue-800 dark:hover:text-blue-600"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-10 w-10" aria-hidden="true" />
