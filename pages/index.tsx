@@ -95,7 +95,7 @@ const Index = () => {
   return (
     <div>
       <div className="flex bg-gradient-to-b from-blue-600 to-gray-200 dark:from-blue-700 dark:to-gray-900 w-screen h-screen justify-center items-center">
-        <div className="flex flex-col justify-around bg-white/50 dark:bg-black/50 backdrop-blur-2xl rounded-3xl shadow-xl items-center h-2/3 md:h-3/4 w-11/12 md:w-3/4 py-24">
+        <div className="flex flex-col justify-around bg-white/50 dark:bg-black/50 backdrop-blur-2xl rounded-3xl shadow-xl items-center h-2/3 md:h-3/4 w-11/12 md:w-3/4 py-10">
           {/* <p className="text-6xl text-gray-700">1</p> */}
           <img
             className="inline-block h-48 w-48 md:h-72 md:w-72 rounded-full shadow-xl"
