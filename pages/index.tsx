@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
-const name = 'Pongsaphol Pongsawakul'
+const name = 'Pongsaphol'
+const surname = 'Pongsawakul'
 const speed = 100
 const social = [
   {
@@ -68,6 +69,7 @@ const social = [
 
 const Index = () => {
   const [innerName, setInnerName] = useState<string>('')
+  const [innerSurname, setInnerSurname] = useState<string>('')
 
   useEffect(() => {
     setTimeout(() => {
@@ -78,20 +80,36 @@ const Index = () => {
     }, speed)
   }, [innerName])
 
+  useEffect(() => {
+    setTimeout(() => {
+      if (
+        innerName.length == name.length &&
+        innerSurname.length < surname.length
+      ) {
+        const newSurname = innerSurname + surname.charAt(innerSurname.length)
+        setInnerSurname(newSurname)
+      }
+    }, speed)
+  }, [innerName, innerSurname])
+
   return (
     <div>
       <div className="flex bg-gradient-to-b from-blue-600 to-gray-200 w-screen h-screen justify-center items-center">
-        <div className="flex flex-col justify-around bg-white/70 backdrop-blur-2xl rounded-3xl shadow-xl items-center h-3/4 w-11/12 md:w-2/3 py-24">
+        <div className="flex flex-col justify-around bg-white/50 backdrop-blur-2xl rounded-3xl shadow-xl items-center h-2/3 md:h-3/4 w-11/12 md:w-3/4 py-24">
           {/* <p className="text-6xl text-gray-700">1</p> */}
           <img
             className="inline-block h-48 w-48 md:h-72 md:w-72 rounded-full shadow-xl"
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
             alt=""
           />
-
-          <span className="text-4xl md:text-5xl lg:text-6xl text-center font-bold decoration-clone bg-blue-800 text-gray-600 text-opacity-50 bg-clip-text p-4">
-            {innerName}
-          </span>
+          <div className="flex flex-col md:flex-row h-24 justify-center items-center">
+            <span className="h-12 md:h-20 text-4xl md:text-5xl lg:text-6xl text-center font-bold decoration-clone bg-blue-800 text-gray-600 text-opacity-50 bg-clip-text pb-1 md:pb-2 md:mr-6">
+              {innerName}
+            </span>
+            <span className="h-12 md:h-20 text-4xl md:text-5xl lg:text-6xl text-center font-bold decoration-clone bg-blue-800 text-gray-600 text-opacity-50 bg-clip-text pb-1 md:pb-2">
+              {innerSurname}
+            </span>
+          </div>
           <div className="flex space-x-6">
             {social.map((item) => (
               <a
